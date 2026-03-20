@@ -1,135 +1,47 @@
-# React + TypeScript + Vite Frame
+# bloom-gallery
 
-A minimal, opinionated starter repository for building modern React applications with TypeScript and Vite.
-
-This repository is intended to be used as a **project frame**: clone or generate a new repository from it, rename it, and build on top without redoing basic setup each time.
+A photography portfolio website built around a parallax gallery experience. Clean, quiet, and a little alive.
 
 ---
 
-## Features
+## Concept
 
-* **React + TypeScript + Vite** for a fast development experience.
-* **ESLint (flat config) + Prettier** for code quality and consistent formatting.
-* **Path alias** `@/` → `src/` for cleaner imports.
-* **Environment variable** handling via `.env`.
-* **Scalable folder structure** designed for growth.
-* **Minimal starter components** to get you moving immediately.
-* **Project rename script** to quickly personalize new clones.
+The site lives somewhere between a gallery wall and a greenhouse. A warm off-white background, not sterile, more like paper or linen, with two large orchids flanking the edges at low opacity. The orchids aren't decoration for decoration's sake; they breathe. Either animated to bloom slowly in CSS, or using sped-up video of real orchids blooming played on loop. The effect should feel ambient, not distracting.
+
+The gallery is the centerpiece: a horizontal infinite scroll spanning the full viewport width, with a parallax effect on the images as you move through them. Already coded. The images don't just slide — they have depth.
 
 ---
 
-## Getting Started
+## Pages
 
-### Use as a template (Recommended)
+### `/` — Gallery
+The main experience. Full-width horizontal gallery with parallax scrolling. Orchids in the background. Minimal navbar at the top. Nothing competes with the images.
 
-1. Click **"Use this template"** on GitHub.
-2. Create a new repository from the template.
-3. Clone your new repository locally.
-4. Install dependencies:
+### `/playground` — Grid
+An infinite scrolling image grid. All images, no constraints. Click any image to open a modal — the modal shows the image and a written piece: either about that specific photo or about the shooting session it came from. A place to get lost in the archive.
 
-```bash
-npm install
-npm run dev
-
-```
-
-### Clone manually
-
-If you prefer to clone the repository directly:
-
-```bash
-git clone <repo-url> my-new-project
-cd my-new-project
-npm install
-
-```
-
-**Rename the project:**
-To update your `package.json` and project references automatically:
-
-```bash
-npm run rename -- my-new-project
-
-```
+### `/info` — Info
+About the project / photographer. Kept simple. Probably just text and maybe one image.
 
 ---
 
-## Scripts
+## Design
 
-| Script | Description |
-| --- | --- |
-| `npm run dev` | Start the development server |
-| `npm run build` | Type-check and build for production |
-| `npm run preview` | Preview the production build locally |
-| `npm run lint` | Run ESLint to find code issues |
-| `npm run format` | Format code with Prettier |
-| `npm run rename -- <name>` | Rename the project (updates `package.json`) |
+- **Background**: Off-white, warm. Think uncoated paper, not a hospital wall.
+- **Orchids**: Two large orchids, left and right edges, low opacity. Animated bloom (CSS or video TBD).
+- **Navbar**: As minimal as possible. Logo or wordmark left, three navigation links. That's it.
+- **Typography**: TBD, needs to feel considered. Probably something with a little character, not a system font.
+- **Gallery**: Already built. Horizontal infinite scroll, full viewport width, parallax on images.
+- **Modal**: Opens on image click in the playground. Shows image + text. Clean overlay.
 
 ---
 
-## Environment Variables
+## Stack
 
-This project uses Vite’s environment variable system. Create a `.env` file based on the provided example:
-
-```bash
-cp .env.example .env
-
-```
-
-> **Note:** All public variables must be prefixed with `VITE_` to be accessible in your application.
+Built with React, Vite, TypeScript, Claude Code.
 
 ---
 
-## Path Aliases
+## Status
 
-The alias `@/` points to the `src/` directory, allowing for cleaner imports regardless of file depth.
-
-**Example:**
-
-```ts
-import { Button } from '@/components/Button';
-import { useAuth } from '@/lib/hooks';
-
-```
-
----
-
-## Project Structure
-
-```text
-src/
-├── app/          # Application shell, providers, layout
-├── components/   # Reusable UI components
-├── lib/          # Utilities, hooks, and helpers
-├── styles/       # Global styles and themes
-└── types/        # Shared TypeScript types and interfaces
-
-```
-
----
-
-## Formatting & Linting
-
-* **ESLint** handles code quality and identifies common React/TypeScript issues.
-* **Prettier** is responsible for code formatting only.
-* Conflicting ESLint formatting rules are disabled via `eslint-config-prettier`.
-
-**Recommended Editor Setup:**
-
-* Enable **Format on Save**.
-* Install the **ESLint** and **Prettier** extensions (e.g., for VS Code).
-
----
-
-## Adding More Tooling
-
-This frame intentionally avoids locking in specific libraries to remain flexible. Add these as needed:
-
-* **Styling:** Tailwind CSS, CSS Modules, or Styled Components.
-* **Routing:** React Router or TanStack Router.
-* **State Management:** Zustand, Redux Toolkit, or Jotai.
-* **Testing:** Vitest and React Testing Library.
-
----
-
-Would you like me to help you write a configuration guide for any specific additions, like adding **Tailwind CSS** or **React Router** to this setup?
+Early concept / in progress.
